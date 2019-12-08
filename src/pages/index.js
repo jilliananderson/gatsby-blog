@@ -1,3 +1,18 @@
-import React from "react"
+import React from "react";
+import { Link } from "gatsby";
+import Header from "../components/header";
+import Layout from "../components/layout";
 
-export default () => <div>Hello world!</div>
+const App = () => {
+  return (
+    <Layout>
+      <div>
+        <Header headerText="Home Page" />
+        <Link to="/about/">About</Link>
+        <div>This is the home page.</div>
+      </div>
+    </Layout>
+  );
+};
+
+export default App;
