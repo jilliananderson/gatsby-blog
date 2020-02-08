@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Dev Diaries (WIP)`,
+    title: `Jillian Anderson Slate`,
   },
   plugins: [
     {

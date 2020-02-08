@@ -2,43 +2,42 @@ import React from "react";
 import { css } from "@emotion/core";
 import { Link, graphql } from "gatsby";
 import { rhythm } from "../utils/typography";
+import Header from "../components/header";
+import Subheader from "../components/subheader";
 import Layout from "../components/layout";
+
+const headerText = "Unordered List of Posts";
+
 export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <h1
-          css={css`
-            display: inline-block;
-            border-bottom: 1px solid;
-          `}
-        >
-          WIP Title
-        </h1>
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+        <Header headerText={headerText} />
+        <Subheader>{data.allMarkdownRemark.totalCount} Posts</Subheader>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <Link
               to={node.fields.slug}
               css={css`
                 text-decoration: none;
-                color: inherit;
+                color: black;
               `}
             >
-              <h3
+              <Subheader
                 css={css`
                   margin-bottom: ${rhythm(1 / 4)};
+                  font-family: Helvetica, sans-serif;
                 `}
               >
                 {node.frontmatter.title}{" "}
                 <span
                   css={css`
-                    color: #bbb;
+                    color: black;
                   `}
                 >
                   — {node.frontmatter.date}
                 </span>
-              </h3>
+              </Subheader>
               <p>{node.excerpt}</p>
             </Link>
           </div>
