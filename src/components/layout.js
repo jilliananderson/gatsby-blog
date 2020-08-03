@@ -4,28 +4,13 @@ import { useStaticQuery, Link, graphql } from "gatsby";
 import { rhythm } from "../utils/typography";
 
 const OuterWrapper = styled.div`
-  background-color: rgb(255, 147, 150);
   width: 100%;
   height: 100%;
   font-family: Helvetica, sans-serif;
 `;
 
-const Hero = styled.div`
-  background-image: url(/mountainsky.jpg);
-  height: 40vh;
-  overflow: hidden;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-
-  @media screen and (max-width: 450px) {
-    display: none;
-  }
-`;
-
 const NavWrapper = styled.div`
-  background-color: rgb(3, 42, 68);
+  background-color: #7710dd;
   margin: 0;
   position: sticky;
   top: 0;
@@ -43,17 +28,16 @@ const StyledLink = styled.li`
   margin: 1rem 2rem;
 
   :hover {
-    text-shadow: 0 0 5px rgb(255, 147, 150);
+    text-shadow: 0 0 5px;
   }
 `;
 
 const InnerLink = styled(Link)`
   text-decoration: none;
-  color: white;
+  color: #dadfe1;
 `;
 
 const MainContentWrapper = styled.div`
-  background-color: white;
   margin: 0 auto;
   max-width: 700px;
   padding: ${rhythm(2)};
@@ -81,7 +65,6 @@ const Layout = ({ children }) => {
   );
   return (
     <OuterWrapper>
-      <Hero></Hero>
       <NavWrapper>
         <NavList>
           <NavListItem to="/">Blog</NavListItem>
