@@ -30,7 +30,7 @@ const BioWrapper = styled.div`
 `;
 
 const About = ({ data }) => {
-  const headerText = "About " + data.site.siteMetadata.title;
+  const headerText = "about " + data.site.siteMetadata.title;
   return (
     <Layout>
       <div>
@@ -38,8 +38,9 @@ const About = ({ data }) => {
         <RoundImage src="/jillianwithbeer.jpg" />
         <BioWrapper>
           <p>
-            Hi, my name is Jillian. Depending on your preference of social
-            media, my bio could contain any of the following:
+            Hi, my name is Jillian, aka the person writing the blogs (thus
+            "jillianblogs"--creative, right?). Depending on your preference of
+            social media, my bio could contain any of the following:
           </p>
           <SocialQuote>
             I rarely take pictures of food; by the time I think of it, I've
@@ -63,8 +64,8 @@ const About = ({ data }) => {
             After moving to Europe, I had the unique opportunity to redefine my
             career path. I chose to cultivate a new set of skills and become a
             web developer. I've been a software developer for about a year and a
-            half now, and I'm happy to say making the switch was the right
-            choice ✨
+            half now, and I'm still thrilled with my choice to make the switch
+            ✨
           </p>
           <p>
             My only complaint? Diversity and inclusion in the tech world could
@@ -73,8 +74,9 @@ const About = ({ data }) => {
           </p>
           <p>
             My other passions: rock climbing, public speaking (yes, really),
-            checking out hipster coffee spots, and traveling as much as my
-            schedule allows.
+            checking out hipster coffee spots, trying to cook meals that are
+            better than merely edible, and traveling as much as my schedule
+            allows.
           </p>
         </BioWrapper>
       </div>

@@ -10,7 +10,7 @@ const OuterWrapper = styled.div`
 `;
 
 const NavWrapper = styled.div`
-  background-color: #7710dd;
+  background-color: #33ffba;
   margin: 0;
   position: sticky;
   top: 0;
@@ -22,19 +22,20 @@ const NavList = styled.ul`
   text-align: center;
   font-size: 1.3rem;
 `;
-
+// background-color: #4dd1b2;
 const StyledLink = styled.li`
   display: inline-block;
-  margin: 1rem 2rem;
-
-  :hover {
-    text-shadow: 0 0 5px;
+  padding: 1rem 2rem;
+  margin-bottom: 0;
+  :hover,
+  :focus {
+    background-color: #47ebb3;
   }
 `;
 
 const InnerLink = styled(Link)`
   text-decoration: none;
-  color: #dadfe1;
+  color: #2e343b;
 `;
 
 const MainContentWrapper = styled.div`

@@ -6,7 +6,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Jillian Anderson Slate`,
+    title: `jillianblogs`,
+    siteUrl: `https://www.jillianblogs.com`,
   },
   plugins: [
     {
