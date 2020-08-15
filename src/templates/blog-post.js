@@ -5,6 +5,7 @@ import Layout from "../components/layout";
 
 const PostTitle = styled.h1`
   font-family: Helvetica, sans-serif;
+  color: #2e343b;
 `;
 
 export default ({ data }) => {

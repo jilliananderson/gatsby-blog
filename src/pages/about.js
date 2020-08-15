@@ -27,6 +27,7 @@ const SocialQuote = styled.p`
 
 const BioWrapper = styled.div`
   font-size: 16px;
+  color: #2e343b;
 `;
 
 const About = ({ data }) => {

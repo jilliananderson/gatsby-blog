@@ -32,13 +32,13 @@ export default ({ data }) => {
                 {node.frontmatter.title}{" "}
                 <span
                   css={css`
-                    color: black;
+                    color: #2e343b;
                   `}
                 >
                   — {node.frontmatter.date}
                 </span>
               </Subheader>
-              <p>{node.excerpt}</p>
+              <p style={{ color: "#2e343b" }}>{node.excerpt}</p>
             </Link>
           </div>
         ))}

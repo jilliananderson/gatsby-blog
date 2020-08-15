@@ -44,6 +44,7 @@ const MainContentWrapper = styled.div`
   padding: ${rhythm(2)};
   padding-top: ${rhythm(1.5)};
   text-align: center;
+  color: #2e343b;
 `;
 
 const NavListItem = props => (

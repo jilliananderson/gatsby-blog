@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-const StyledHeader = styled.h3`
+const StyledSubHeader = styled.h3`
   font-family: Helvetica, sans-serif;
+  color: #2e343b;
 `;
 
 const Subheader = props => {
-  return <StyledHeader>{props.children}</StyledHeader>;
+  return <StyledSubHeader>{props.children}</StyledSubHeader>;
 };
 
 export default Subheader;
