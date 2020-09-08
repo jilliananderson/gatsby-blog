@@ -22,11 +22,11 @@ const RoundImage = styled.img`
 
 const SocialQuote = styled.p`
   font-style: italic;
-  font-size: 0.9em;
 `;
 
 const BioWrapper = styled.div`
   font-size: 16px;
+  line-height: 23px;
   color: #2e343b;
 `;
 
@@ -34,9 +34,12 @@ const About = ({ data }) => {
   const headerText = "about " + data.site.siteMetadata.title;
   return (
     <Layout>
-      <div>
+      <>
         <Header headerText={headerText} />
-        <RoundImage src="/jillianwithbeer.jpg" />
+        <RoundImage
+          src="/jillianwithbeer.jpg"
+          alt="Author enjoying a tall beer"
+        />
         <BioWrapper>
           <p>
             Hi, my name is Jillian, aka the person writing the blogs (thus
@@ -49,24 +52,36 @@ const About = ({ data }) => {
           </SocialQuote>
           <SocialQuote>
             halfway-hipster techie expat, hell-bent on being as stereotypically
-            American as Berlin will allow✌🏻
+            American as Berlin will allow{" "}
+            <span role="img" aria-label="peace sign emoji">
+              ✌️
+            </span>
           </SocialQuote>
           <SocialQuote>OK but is there gonna be food</SocialQuote>
-          <p>You can take your pick, or read a little more ⬇️</p>
+          <p style={{ marginBottom: "2em" }}>
+            You can take your pick, or read a little more{" "}
+            <span role="img" aria-label="arrow pointing down emoji">
+              ⬇️
+            </span>
+          </p>
           <p>
             I'm a product of the Midwest US, but in the last few years I've
             lived in Barcelona and, more recently, Berlin. In college in
             Minnesota, I studied Spanish and Psychology with a focus on
             neuroscience, but considering the job market it should be no
             surprise that I wound up in a completely unrelated field (insurance)
-            🤷🏻‍♀️
+            <span role="img" aria-label="woman shrugging emoji">
+              🤷🏻‍♀️
+            </span>
           </p>
           <p>
             After moving to Europe, I had the unique opportunity to redefine my
             career path. I chose to cultivate a new set of skills and become a
             web developer. I've been a software developer for about a year and a
             half now, and I'm still thrilled with my choice to make the switch
-            ✨
+            <span role="img" aria-label="sparkle emoji">
+              ✨
+            </span>
           </p>
           <p>
             There is one thing I would change if I could, though: diversity and
@@ -86,7 +101,7 @@ const About = ({ data }) => {
             allows.
           </p>
         </BioWrapper>
-      </div>
+      </>
     </Layout>
   );
 };

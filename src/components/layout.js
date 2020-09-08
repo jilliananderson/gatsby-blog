@@ -29,6 +29,7 @@ const StyledLink = styled.li`
   :hover,
   :focus {
     background-color: #47ebb3;
+    cursor: pointer;
   }
 `;
 

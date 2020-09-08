@@ -8,14 +8,19 @@ const PostTitle = styled.h1`
   color: #2e343b;
 `;
 
+const PostContent = styled.div`
+  font-size: 16px;
+  line-height: 23px;
+`;
+
 export default ({ data }) => {
   const post = data.markdownRemark;
   return (
     <Layout>
-      <div>
+      <>
         <PostTitle>{post.frontmatter.title}</PostTitle>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
+        <PostContent dangerouslySetInnerHTML={{ __html: post.html }} />
+      </>
     </Layout>
   );
 };
