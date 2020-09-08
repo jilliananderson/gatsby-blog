@@ -69,9 +69,15 @@ const About = ({ data }) => {
             ✨
           </p>
           <p>
-            My only complaint? Diversity and inclusion in the tech world could
-            use some improvement. I've become passionate about encouraging and
-            empowering other women to enter into and succeed in the industry.
+            There is one thing I would change if I could, though: diversity and
+            inclusion in the tech world is dismal (at best) and the (infrequent)
+            conversations around these problems are disappointingly shallow. The
+            more I see this problem, the more passionate I become about doing my
+            small part to correct the imbalances. I am always ready to encourage
+            and empower members of underrepresented groups to enter and become
+            successful in the tech industry, and I am committed to using
+            whatever leverage and/or platform I have to make it a more inclusive
+            and welcoming space.
           </p>
           <p>
             My other passions: rock climbing, public speaking (yes, really),
