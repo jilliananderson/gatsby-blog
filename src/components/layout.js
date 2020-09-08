@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { useStaticQuery, Link, graphql } from "gatsby";
-import { rhythm } from "../utils/typography";
 
 const OuterWrapper = styled.div`
   width: 100%;
