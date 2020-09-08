@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { useStaticQuery, Link, graphql } from "gatsby";
+import { Link } from "gatsby";
 
 const OuterWrapper = styled.div`
   width: 100%;
@@ -21,7 +21,7 @@ const NavList = styled.ul`
   text-align: center;
   font-size: 1.3rem;
 `;
-// background-color: #4dd1b2;
+
 const StyledLink = styled.li`
   display: inline-block;
   padding: 1rem 2rem;
@@ -40,30 +40,19 @@ const InnerLink = styled(Link)`
 const MainContentWrapper = styled.div`
   margin: 0 auto;
   max-width: 700px;
-  padding: ${rhythm(2)};
-  padding-top: ${rhythm(1.5)};
+  padding: 3rem;
+  padding-top: 2rem;
   text-align: center;
   color: #2e343b;
 `;
 
 const NavListItem = props => (
-  <StyledLink>
+  <StyledLink tabindex="0">
     <InnerLink to={props.to}>{props.children}</InnerLink>
   </StyledLink>
 );
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `
-  );
   return (
     <OuterWrapper>
       <NavWrapper>
