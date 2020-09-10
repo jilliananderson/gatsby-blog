@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
+    "commit": "git-cz",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
@@ -16,10 +17,15 @@
   "dependencies": {
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.27",
+    "commitizen": "^4.2.1",
+    "cz-customizable": "^6.3.0",
+    "cz-customizable-ghooks": "^2.0.0",
     "gatsby": "^2.18.17",
     "gatsby-plugin-emotion": "^4.1.16",
     "gatsby-source-filesystem": "^2.1.40",
     "gatsby-transformer-remark": "^2.6.39",
+    "git-cz": "^4.7.1",
+    "husky": "^4.3.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-typography": "^0.16.19",
@@ -35,5 +41,18 @@
   },
   "bugs": {
     "url": "https://github.com/JillianAndersonSlate/gatsby-blog/issues"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    },
+    "cz-customizable": {
+      "config": "./.cz-config.js"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commitmsg": "cz-customizable-ghooks"
+    }
   }
 }
