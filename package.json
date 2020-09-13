@@ -44,7 +44,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "git-cz"
+      "path": "node_modules/cz-customizable"
     },
     "cz-customizable": {
       "config": "./.cz-config.js"
@@ -52,7 +52,8 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "cz-customizable-ghooks"
+      "commit-msg": "cz-customizable-ghooks",
+      "prepare-commit-msg": "exec < /dev/tty && node_modules/.bin/cz --hook || true"
     }
   }
 }
