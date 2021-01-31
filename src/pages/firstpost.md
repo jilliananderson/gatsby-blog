@@ -1,6 +1,7 @@
 ---
 title: "First blog post with gatsby"
 date: "2019-12-09"
+topics: "Travel"
 ---
 
 Here is some text from hipsum:

@@ -1,6 +1,7 @@
 ---
 title: "Second blog post with gatsby"
 date: "2019-12-10"
+topics: "Software Development"
 ---
 
 More hipsum:

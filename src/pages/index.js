@@ -1,62 +1,61 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { Link, graphql } from "gatsby";
+// import { graphql } from "gatsby";
 import Header from "../components/header";
-import Subheader from "../components/subheader";
 import Layout from "../components/layout";
 
-const headerText = "Unordered List of Posts";
+const headerText = "Posts by Topic";
 
-const StyledExcerpt = styled.p`
-  color: #2e343b;
-  font-size: 16px;
-  line-height: 23px;
+const TopicWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 `;
 
-const StyledLink = styled(Link)`
-  text-decoration: none;
+const FakePolaroid = styled.div`
+  background-color: white;
+  height: 30vw;
+  width: 30vw;
+  margin: 12px;
 `;
 
-const StyledPostDate = styled.p`
-  color: #2e343b;
-  font-size: 18px;
-`;
+// TODOS:
+// - make each topic a clickable link
+// - on the pages created, sort for posts by topic
+// - could perhaps review all the topics in data and make a new set
+// - but could NOT map over them as some posts in the future may have multiple tags
 
-export default ({ data }) => {
+export default () => {
   return (
     <Layout>
       <>
         <Header headerText={headerText} />
         <br />
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <StyledLink to={node.fields.slug}>
-              <Subheader>{node.frontmatter.title}</Subheader>
-              <StyledPostDate>{node.frontmatter.date}</StyledPostDate>
-              <StyledExcerpt>{node.excerpt}</StyledExcerpt>
-            </StyledLink>
-          </div>
-        ))}
+        <TopicWrapper>
+          <FakePolaroid> Travel</FakePolaroid>
+          <FakePolaroid> Software Development</FakePolaroid>
+          <FakePolaroid> Other shit</FakePolaroid>
+        </TopicWrapper>
       </>
     </Layout>
   );
 };
-export const query = graphql`
-  query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
-          }
-          fields {
-            slug
-          }
-          excerpt
-        }
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   query {
+//     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+//       edges {
+//         node {
+//           id
+//           frontmatter {
+//             title
+//             date(formatString: "DD MMMM, YYYY")
+//           }
+//           fields {
+//             slug
+//           }
+//           excerpt
+//         }
+//       }
+//     }
+//   }
+// `;
