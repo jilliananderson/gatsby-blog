@@ -6,6 +6,7 @@ import { Link } from "gatsby";
 const Hero = styled.div`
   background-image: url(/jillianblogs_hero_img.jpg);
   height: 40vh;
+  min-height: 270px;
   overflow: hidden;
   background-position: center;
   background-repeat: no-repeat;
@@ -21,6 +22,9 @@ const HeroText = styled.h1`
   position: absolute;
   top: 50%;
   left: 50%;
+  font-size: 3rem;
+  font-family: Didot;
+  font-weight: 900;
   transform: translate(-50%, -50%);
 `;
 
@@ -34,13 +38,13 @@ const NavWrapper = styled.div`
 const NavList = styled.ul`
   margin: 0;
   line-height: 1;
-  text-align: center;
-  font-size: 1.3rem;
+  text-align: right;
+  font-size: 1.2rem;
 `;
 
 const StyledLink = styled.li`
   display: inline-block;
-  padding: 1rem 2rem;
+  padding: 12px;
   margin-bottom: 0;
   :hover,
   :focus {
@@ -53,9 +57,10 @@ const InnerLink = styled(Link)`
   color: #2e343b;
 `;
 
+// TODO review mobile view
 const MainContentWrapper = styled.div`
   margin: 0 auto;
-  max-width: 700px;
+  width: 65%;
   padding: 2.5rem;
   padding-top: 2.1rem;
   text-align: center;
@@ -63,6 +68,8 @@ const MainContentWrapper = styled.div`
   height: 100%;
 `;
 
+// TODO make this one component for readability
+// and to make the entire area clickable
 const NavListItem = props => (
   <StyledLink tabindex="0">
     <InnerLink to={props.to}>{props.children}</InnerLink>
@@ -88,8 +95,10 @@ const Layout = ({ children }) => (
     </Hero>
     <NavWrapper>
       <NavList>
-        <NavListItem to="/">home</NavListItem>
-        <NavListItem to="/about">about</NavListItem>
+        <NavListItem to="/">🏡home sweet home</NavListItem>
+        <NavListItem to="/now">😸right meow</NavListItem>
+        <NavListItem to="/blogs">👉to the blogs!</NavListItem>
+        <NavListItem to="/about">🤔who is Jillian?</NavListItem>
       </NavList>
     </NavWrapper>
     <MainContentWrapper>{children}</MainContentWrapper>
